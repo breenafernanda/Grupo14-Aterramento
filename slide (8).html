@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            background-color: #2C2C2C;
+            background-image: 
+                linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+            background-size: 40px 40px;
+            color: #E0E0E0;
+            font-family: 'Inter', sans-serif;
+            display: flex;
+            flex-direction: column;
+        }
+        .header {
+            padding-top: 60px;
+            padding-left: 80px;
+            display: flex;
+            align-items: center;
+        }
+        .accent-line {
+            width: 60px;
+            height: 4px;
+            background-color: #FF8C00;
+            margin-right: 20px;
+        }
+        h2 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 32px;
+            color: #FFFFFF;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .main-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            padding-top: 60px;
+            padding-left: 80px;
+            padding-right: 80px;
+        }
+        .calc-section {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+        .tech-block {
+            border-left: 3px solid #006400;
+            padding-left: 25px;
+            padding-top: 5px;
+        }
+        .tech-block h3 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 20px;
+            color: #FF8C00;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+        .tech-block p {
+            font-size: 17px;
+            line-height: 1.6;
+            color: #E0E0E0;
+        }
+        .criteria-section {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 40px;
+            padding-left: 40px;
+            padding-right: 40px;
+            display: flex;
+            flex-direction: column;
+        }
+        .criteria-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 22px;
+            color: #FFFFFF;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            border-bottom: 2px solid #006400;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+        .math-comparison {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 28px;
+            color: #FFFFFF;
+            background: #1A1A1A;
+            padding-top: 20px;
+            padding-left: 30px;
+            padding-right: 30px;
+            border: 1px solid #FF8C00;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+        .iteration-box {
+            margin-top: auto;
+            background: rgba(255, 140, 0, 0.1);
+            padding-top: 20px;
+            padding-left: 25px;
+            padding-right: 25px;
+            border-top: 2px solid #FF8C00;
+            font-size: 15px;
+            color: #E0E0E0;
+            line-height: 1.5;
+        }
+        .iteration-box strong {
+            color: #FF8C00;
+            display: block;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="header">
+            <div class="accent-line"></div>
+            <h2>Verificação de Segurança (Passos 5-8)</h2>
+        </div>
+
+        <div class="main-grid">
+            <div class="calc-section">
+                <div class="tech-block">
+                    <h3>Cálculo das Tensões Reais</h3>
+                    <p>Após o dimensionamento físico da malha, calculam-se as tensões que efetivamente ocorrerão durante a falta:</p>
+                    <p style="padding-top: 15px;"><strong>Tensão de Malha (E<sub>m</sub>):</strong> A maior tensão de toque possível dentro de um reticulado da malha.</p>
+                    <p style="padding-top: 10px;"><strong>Tensão de Passo (E<sub>s</sub>):</strong> A maior tensão de passo na periferia ou em pontos críticos da subestação.</p>
+                </div>
+                <div class="tech-block">
+                    <h3>Fatores Geométricos</h3>
+                    <p>Os cálculos de E<sub>m</sub> e E<sub>s</sub> dependem de fatores de correção (K<sub>m</sub>, K<sub>s</sub>, K<sub>i</sub>) que consideram a profundidade dos condutores, o número de hastes e o espaçamento entre cabos.</p>
+                </div>
+            </div>
+
+            <div class="criteria-section">
+                <p class="criteria-title">Critérios de Aprovação</p>
+                
+                <div class="math-comparison">
+                    E<sub>m</sub> &lt; E<sub>touch<sub>limit</sub></sub>
+                </div>
+                
+                <div class="math-comparison">
+                    E<sub>s</sub> &lt; E<sub>step<sub>limit</sub></sub>
+                </div>
+
+                <div class="iteration-box">
+                    <strong>Processo Iterativo</strong>
+                    Se qualquer um dos critérios falhar, o projeto deve ser revisado. As ações corretivas incluem: reduzir o espaçamento da malha, adicionar hastes de terra em pontos críticos ou aumentar a espessura da camada de brita.
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

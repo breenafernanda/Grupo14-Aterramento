@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            background-color: #2C2C2C;
+            background-image: 
+                linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+            background-size: 40px 40px;
+            color: #E0E0E0;
+            font-family: 'Inter', sans-serif;
+            display: flex;
+            flex-direction: column;
+        }
+        .header {
+            padding-top: 60px;
+            padding-left: 80px;
+            display: flex;
+            align-items: center;
+        }
+        .accent-line {
+            width: 60px;
+            height: 4px;
+            background-color: #FF8C00;
+            margin-right: 20px;
+        }
+        h2 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 32px;
+            color: #FFFFFF;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        .case-study-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 40px;
+            padding-top: 80px;
+            padding-left: 80px;
+            padding-right: 80px;
+        }
+        .case-block {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .block-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            border-bottom: 2px solid #006400;
+            padding-bottom: 10px;
+        }
+        .block-icon {
+            color: #FF8C00;
+            font-size: 24px;
+        }
+        .block-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 20px;
+            color: #FFFFFF;
+            text-transform: uppercase;
+        }
+        .block-content {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #B0B0B0;
+        }
+        .highlight-text {
+            color: #FF8C00;
+            font-weight: 600;
+        }
+        .footer-note {
+            margin-top: auto;
+            padding-top: 40px;
+            padding-left: 80px;
+            padding-right: 80px;
+            padding-bottom: 60px;
+        }
+        .note-box {
+            background: rgba(255, 140, 0, 0.05);
+            border: 1px solid rgba(255, 140, 0, 0.2);
+            padding-top: 20px;
+            padding-left: 30px;
+            padding-right: 30px;
+            font-size: 16px;
+            font-style: italic;
+            color: #E0E0E0;
+            border-left: 5px solid #FF8C00;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="header">
+            <div class="accent-line"></div>
+            <h2>Estudo de Caso 1: Corrosão e Falha</h2>
+        </div>
+
+        <div class="case-study-2x2" style="display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: auto auto; gap: 40px 40px; padding-top: 80px; padding-left: 80px; padding-right: 80px;">
+            <!-- O Problema -->
+            <div class="case-block" style="grid-column: 1; grid-row: 1;">
+                <div class="block-header">
+                    <i class="fas fa-search-minus block-icon"></i>
+                    <h3 class="block-title">O Problema</h3>
+                </div>
+                <div class="block-content">
+                    <p>Subestação industrial com <span class="highlight-text">15 anos de operação</span> em solo de baixa resistividade, porém quimicamente agressivo.</p>
+                    <p style="padding-top: 15px;">Identificada <span class="highlight-text">corrosão severa</span> em condutores de aço galvanizado, reduzindo a seção transversal em até 70%.</p>
+                </div>
+            </div>
+            <!-- Figura -->
+            <div style="grid-column: 2; grid-row: 1; display: flex; flex-direction: column; align-items: center; justify-content: flex-start;">
+                <img src="https://private-us-east-1.manuscdn.com/sessionFile/LPaSKNCPRNEGPDlplXHtLf/sandbox/slides_resource_i6fq0mbzbq6urzugaifwr-cee4d321-e2b-prod-us2_1767655157497_na1fn_L2hvbWUvdWJ1bnR1L3VwbG9hZC9zZWFyY2hfaW1hZ2VzL1JYQllKamszN1FTRw.png?x-oss-process=image/resize,w_1560,h_1560/format,webp&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvTFBhU0tOQ1BSTkVHUERscGxYSHRMZi9zYW5kYm94L3NsaWRlc19yZXNvdXJjZV9pNmZxMG1iemJxNnVyenVnYWlmd3ItY2VlNGQzMjEtZTJiLXByb2QtdXMyXzE3Njc2NTUxNTc0OTdfbmExZm5fTDJodmJXVXZkV0oxYm5SMUwzVndiRzloWkM5elpXRnlZMmhmYVcxaFoyVnpMMUpZUWxsS2Ftc3pOMUZUUncucG5nP3gtb3NzLXByb2Nlc3M9aW1hZ2UvcmVzaXplLHdfMTU2MCxoXzE1NjAvZm9ybWF0LHdlYnAiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3OTg3NjE2MDB9fX1dfQ__&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=eKYVQH8seKTx~dYh88KVfgmiHTM8odzIcx2HFj3wf4b6Gko39sZA-I-4mIYQp39rFwYmuxK3kaA9BwwtecN3XbCyE7kwEk~Gdn8l58u8hXQQvtwcTHW5PcC-VW3cPaAUPnTmsaWrSKXMMwBKyn1gCZX9RYrOrVLIr0HgAPsrA6H850046gecS8FnqtfiHHQnMp4QwYpE5-bO0FQcmjb9laNZpKAgbVB2NU8V7gG47Q-V8z2c6mT4lbLG8LpuuO5CekSv1jy2OswjZ8sPurFzykvXBA~E-iY3xTC-wGBlrASQLkhKHoHaaD2yQOdHZnqkH8EWi-z1pAwRv8CfZz-ZAw__" alt="Corrosão na Malha" style="width: 100%; max-width: 350px; height: auto; background: #fff; border: 1px solid #ccc;">
+                <span style="font-size: 14px; color: #aaa; font-style: italic; margin-top: 8px; text-align: center;">Figura: Evidência de corrosão severa e falha de solda em malha de terra.</span>
+            </div>
+            <!-- Consequências -->
+            <div class="case-block" style="grid-column: 1; grid-row: 2;">
+                <div class="block-header">
+                    <i class="fas fa-chart-line block-icon"></i>
+                    <h3 class="block-title">Consequências</h3>
+                </div>
+                <div class="block-content">
+                    <p>Aumento drástico da resistência de aterramento (<span class="highlight-text">R<sub>g</sub></span>) e perda de caminhos de baixa impedância.</p>
+                    <p style="padding-top: 15px;">Impacto no GPR: Elevação descontrolada do potencial durante falta monofásica, gerando <span class="highlight-text">tensões de toque perigosas</span>.</p>
+                    <p style="padding-top: 15px;">Falha de continuidade pode invalidar os cálculos de segurança previstos em normas como a IEEE 80.</p>
+                </div>
+            </div>
+            <!-- Lições -->
+            <div class="case-block" style="grid-column: 2; grid-row: 2;">
+                <div class="block-header">
+                    <i class="fas fa-lightbulb block-icon"></i>
+                    <h3 class="block-title">Lições</h3>
+                </div>
+                <div class="block-content">
+                    <p>Necessidade de medições periódicas de <span class="highlight-text">continuidade da malha</span> e inspeções termográficas em conexões.</p>
+                    <p style="padding-top: 15px;">Recomendação: Uso de condutores de cobre ou aço com revestimento bimetálico em solos corrosivos.</p>
+                    <p style="padding-top: 15px;">A escolha de materiais deve considerar a química do solo para garantir a durabilidade do sistema de aterramento.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-note">
+            <div class="note-box">
+                "A integridade física da malha é tão importante quanto o seu dimensionamento teórico. Sem continuidade, os cálculos da IEEE 80 tornam-se inválidos."
+            </div>
+        </div>
+    </div>
+</body>
+</html>

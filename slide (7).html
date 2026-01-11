@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            background-color: #2C2C2C;
+            background-image: 
+                linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+            background-size: 40px 40px;
+            color: #E0E0E0;
+            font-family: 'Inter', sans-serif;
+            display: flex;
+            flex-direction: column;
+        }
+        .header {
+            padding-top: 60px;
+            padding-left: 80px;
+            display: flex;
+            align-items: center;
+        }
+        .accent-line {
+            width: 60px;
+            height: 4px;
+            background-color: #FF8C00;
+            margin-right: 20px;
+        }
+        h2 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 32px;
+            color: #FFFFFF;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        .steps-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            padding-top: 60px;
+            padding-left: 80px;
+            padding-right: 80px;
+        }
+        .step-card {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 30px;
+            padding-left: 30px;
+            padding-right: 30px;
+            min-height: 220px;
+            position: relative;
+        }
+        .step-number {
+            position: absolute;
+            top: -15px;
+            left: 20px;
+            background: #006400;
+            color: white;
+            padding-top: 5px;
+            padding-left: 15px;
+            padding-right: 15px;
+            font-weight: 700;
+            font-size: 14px;
+            font-family: 'Space Grotesk', sans-serif;
+        }
+        .step-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 20px;
+            color: #FF8C00;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+        .step-content {
+            font-size: 16px;
+            line-height: 1.5;
+            color: #B0B0B0;
+        }
+        .formula-inline {
+            font-family: 'Space Grotesk', sans-serif;
+            color: #FFFFFF;
+            background: rgba(0, 100, 0, 0.1);
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="header">
+            <div class="accent-line"></div>
+            <h2>Algoritmo de Projeto IEEE 80: Etapas 1-4</h2>
+        </div>
+
+        <div class="steps-grid">
+            <!-- Passo 1 -->
+            <div class="step-card">
+                <div class="step-number">PASSO 01</div>
+                <h3 class="step-title">Coleta de Dados</h3>
+                <div class="step-content">
+                    <p>Levantamento da área disponível, corrente de falta máxima (<span class="formula-inline">I<sub>f</sub></span>), tempo de duração da falta (<span class="formula-inline">t<sub>s</sub></span>) e perfil de resistividade do solo (ρ).</p>
+                </div>
+            </div>
+
+            <!-- Passo 2 -->
+            <div class="step-card">
+                <div class="step-number">PASSO 02</div>
+                <h3 class="step-title">Dimensionamento do Condutor</h3>
+                <div class="step-content">
+                    <p>Cálculo da seção transversal mínima para suportar o esforço térmico e evitar a fusão do condutor durante a falta, considerando o material (cobre, aço, etc.).</p>
+                </div>
+            </div>
+
+            <!-- Passo 3 -->
+            <div class="step-card">
+                <div class="step-number">PASSO 03</div>
+                <h3 class="step-title">Estimativa da Malha</h3>
+                <div class="step-content">
+                    <p>Definição do layout preliminar: espaçamento entre condutores paralelos, profundidade de enterramento e localização das hastes de aterramento auxiliares.</p>
+                </div>
+            </div>
+
+            <!-- Passo 4 -->
+            <div class="step-card">
+                <div class="step-number">PASSO 04</div>
+                <h3 class="step-title">Cálculo de R<sub>g</sub> e GPR</h3>
+                <div class="step-content">
+                    <p>Determinação da resistência de aterramento da malha (<span class="formula-inline">R<sub>g</sub></span>) e do Potencial de Elevação do Solo: <span class="formula-inline">GPR = I<sub>G</sub> · R<sub>g</sub></span>.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

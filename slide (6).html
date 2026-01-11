@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            background-color: #2C2C2C;
+            background-image: 
+                linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+            background-size: 40px 40px;
+            color: #E0E0E0;
+            font-family: 'Inter', sans-serif;
+            display: flex;
+            flex-direction: column;
+        }
+        .header {
+            padding-top: 60px;
+            padding-left: 80px;
+            display: flex;
+            align-items: center;
+        }
+        .accent-line {
+            width: 60px;
+            height: 4px;
+            background-color: #FF8C00;
+            margin-right: 20px;
+        }
+        h2 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 32px;
+            color: #FFFFFF;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        .main-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            padding-top: 60px;
+            padding-left: 80px;
+            padding-right: 80px;
+        }
+        .formula-section {
+            grid-column: span 2;
+            background: rgba(0, 100, 0, 0.05);
+            border: 1px solid #006400;
+            padding-top: 40px;
+            padding-left: 40px;
+            padding-right: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .formula-label {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 18px;
+            color: #FF8C00;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+        .math-display {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 48px;
+            color: #FFFFFF;
+            margin-bottom: 30px;
+        }
+        .variable-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            padding-top: 40px;
+        }
+        .tech-block {
+            border-left: 3px solid #FF8C00;
+            padding-left: 25px;
+            padding-top: 5px;
+        }
+        .tech-block h3 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 20px;
+            color: #FFFFFF;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+        .tech-block p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #B0B0B0;
+        }
+        .highlight-value {
+            color: #FF8C00;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="header">
+            <div class="accent-line"></div>
+            <h2>O Fator de Redução C<sub>s</sub> e a Camada Superficial</h2>
+        </div>
+
+        <div class="main-content">
+            <div class="formula-section">
+                <p class="formula-label">Modelagem Matemática (IEEE 80)</p>
+                <div class="math-display">
+                    C<sub>s</sub> = 1 - <span style="border-bottom: 2px solid #FFFFFF;">0.09 · (1 - ρ/ρ<sub>s</sub>)</span>
+                    <br>
+                    <span style="font-size: 24px; display: block; margin-top: -10px; padding-left: 100px;">2 · h<sub>s</sub> + 0.09</span>
+                </div>
+            </div>
+
+            <div class="variable-grid">
+                <div class="tech-block">
+                    <h3>Variáveis de Projeto</h3>
+                    <p>• <span class="highlight-value">ρ:</span> Resistividade do solo nativo (Ω·m).</p>
+                    <p>• <span class="highlight-value">ρ<sub>s</sub>:</span> Resistividade da camada superficial (brita/asfalto).</p>
+                    <p>• <span class="highlight-value">h<sub>s</sub>:</span> Espessura da camada superficial (m).</p>
+                </div>
+                <div class="tech-block">
+                    <h3>Impacto na Segurança</h3>
+                    <p>A brita atua como um isolante de alta resistividade. Um <span class="highlight-value">C<sub>s</sub> reduzido</span> aumenta a resistência de contato dos pés, elevando as tensões toleráveis de toque e passo, permitindo uma malha de aterramento mais otimizada.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

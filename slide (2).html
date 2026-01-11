@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            background-color: #2C2C2C;
+            background-image: 
+                linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+            background-size: 40px 40px;
+            color: #E0E0E0;
+            font-family: 'Inter', sans-serif;
+            display: flex;
+            flex-direction: column;
+        }
+        .header {
+            padding-top: 60px;
+            padding-left: 80px;
+            display: flex;
+            align-items: center;
+        }
+        .accent-line {
+            width: 60px;
+            height: 4px;
+            background-color: #FF8C00;
+            margin-right: 20px;
+        }
+        h2 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 32px;
+            color: #FFFFFF;
+            text-transform: uppercase;
+        }
+        .main-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            padding-top: 60px;
+            padding-left: 80px;
+            padding-right: 80px;
+        }
+        .text-section {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+        .tech-block {
+            border-left: 3px solid #006400;
+            padding-left: 25px;
+            padding-top: 5px;
+        }
+        .tech-block h3 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 20px;
+            color: #FF8C00;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+        .tech-block p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+        .formula-box {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 40px;
+            padding-left: 40px;
+            padding-right: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .math-display {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 36px;
+            color: #FFFFFF;
+            text-align: center;
+            margin-bottom: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #006400;
+        }
+        .math-label {
+            font-size: 14px;
+            color: #FF8C00;
+            text-transform: uppercase;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="header">
+            <div class="accent-line"></div>
+            <h2>Fundamentos da Segurança Elétrica</h2>
+        </div>
+        
+        <div class="main-content">
+            <div class="text-section">
+                <div class="tech-block">
+                    <h3>Objetivo do Aterramento</h3>
+                    <p>Prover um caminho de baixa impedância para correntes de falta, garantindo a operação das proteções e limitando o Potencial de Elevação do Solo (GPR) a níveis seguros.</p>
+                </div>
+                <div class="tech-block">
+                    <h3>Fisiologia do Choque</h3>
+                    <p>O parâmetro crítico de projeto é o limite de fibrilação ventricular. A norma IEEE 80 utiliza a resistência do corpo humano (R<sub>b</sub>) padronizada em 1000 Ω.</p>
+                </div>
+            </div>
+            
+            <div class="formula-box">
+                <p class="math-label">Equação de Dalziel (Corrente Tolerável)</p>
+                <div class="math-display">
+                    I<sub>b</sub> = 0.116 / √t<sub>s</sub>
+                    <p style="font-size: 16px; color: #B0B0B0; margin-top: 10px;">Para pessoas de 50 kg</p>
+                </div>
+                <div class="math-display">
+                    I<sub>b</sub> = 0.157 / √t<sub>s</sub>
+                    <p style="font-size: 16px; color: #B0B0B0; margin-top: 10px;">Para pessoas de 70 kg</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

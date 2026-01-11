@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            background-color: #2C2C2C;
+            background-image: 
+                linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+            background-size: 40px 40px;
+            color: #E0E0E0;
+            font-family: 'Inter', sans-serif;
+            display: flex;
+            flex-direction: column;
+        }
+        .header {
+            padding-top: 60px;
+            padding-left: 80px;
+            display: flex;
+            align-items: center;
+        }
+        .accent-line {
+            width: 60px;
+            height: 4px;
+            background-color: #FF8C00;
+            margin-right: 20px;
+        }
+        h2 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 32px;
+            color: #FFFFFF;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .main-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            padding-top: 60px;
+            padding-left: 80px;
+            padding-right: 80px;
+        }
+        .definition-section {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+        .tech-block {
+            border-left: 3px solid #006400;
+            padding-left: 25px;
+            padding-top: 5px;
+        }
+        .tech-block h3 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 22px;
+            color: #FF8C00;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+        .tech-block p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #E0E0E0;
+        }
+        .formula-section {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 40px;
+            padding-left: 40px;
+            padding-right: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .math-box {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 36px;
+            color: #FFFFFF;
+            background: #1A1A1A;
+            padding-top: 30px;
+            padding-left: 40px;
+            padding-right: 40px;
+            border: 1px solid #006400;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        .math-sub {
+            font-size: 16px;
+            color: #B0B0B0;
+            margin-top: 10px;
+            font-family: 'Inter', sans-serif;
+        }
+        .highlight-list {
+            list-style: none;
+            width: 100%;
+            padding-top: 20px;
+        }
+        .highlight-list li {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-size: 16px;
+            margin-bottom: 15px;
+            color: #B0B0B0;
+        }
+        .highlight-list i {
+            color: #FF8C00;
+            font-size: 12px;
+        }
+        .comparison-tag {
+            margin-top: auto;
+            background: rgba(0, 100, 0, 0.1);
+            color: #FFFFFF;
+            padding-top: 15px;
+            padding-left: 20px;
+            padding-right: 20px;
+            font-weight: 600;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-top: 2px solid #006400;
+            padding-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="header">
+            <div class="accent-line"></div>
+            <h2>Tensão de Passo (E<sub>step</sub>)</h2>
+        </div>
+
+        <div class="main-grid">
+            <div class="definition-section">
+                <div class="tech-block">
+                    <h3>Definição Técnica</h3>
+                    <p>A Tensão de Passo é a diferença de potencial na superfície do solo experimentada por uma pessoa que caminha com uma distância de 1 metro entre os pés, sem estar em contato com qualquer objeto aterrado.</p>
+                </div>
+                <div class="tech-block">
+                    <h3>Circuito Equivalente</h3>
+                    <p>O caminho da corrente é estabelecido de um pé para o outro através do corpo. A resistência de contato é modelada como dois pés em série (2R<sub>f</sub>) com a resistência do corpo (R<sub>b</sub>).</p>
+                </div>
+                <div class="comparison-tag">
+                    <i class="fas fa-info-circle"></i> Nota: E<sub>step</sub> > E<sub>touch</sub> devido à soma das resistências de contato.
+                </div>
+            </div>
+
+            <div class="formula-section">
+                <div class="math-box">
+                    E<sub>step</sub> = (R<sub>b</sub> + 2R<sub>f</sub>) · I<sub>b</sub>
+                    <div class="math-sub">Equação de Malha Fechada</div>
+                </div>
+                
+                <div class="math-box" style="font-size: 28px; border-color: #FF8C00;">
+                    E<sub>step</sub> = (1000 + 6.0 · C<sub>s</sub> · ρ<sub>s</sub>) · I<sub>b</sub>
+                    <div class="math-sub">Limite Tolerável conforme IEEE 80</div>
+                </div>
+
+                <ul class="highlight-list">
+                    <li><i class="fas fa-chevron-right"></i> <strong>R<sub>b</sub>:</strong> Resistência do corpo humano (1000 Ω)</li>
+                    <li><i class="fas fa-chevron-right"></i> <strong>C<sub>s</sub>:</strong> Fator de redução da camada superficial</li>
+                    <li><i class="fas fa-chevron-right"></i> <strong>ρ<sub>s</sub>:</strong> Resistividade da camada superficial (brita)</li>
+                    <li><i class="fas fa-chevron-right"></i> <strong>I<sub>b</sub>:</strong> Corrente de fibrilação (Dalziel)</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

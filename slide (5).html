@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            background-color: #2C2C2C;
+            background-image: 
+                linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+            background-size: 40px 40px;
+            color: #E0E0E0;
+            font-family: 'Inter', sans-serif;
+            display: flex;
+            flex-direction: column;
+        }
+        .header {
+            padding-top: 60px;
+            padding-left: 80px;
+            display: flex;
+            align-items: center;
+        }
+        .accent-line {
+            width: 60px;
+            height: 4px;
+            background-color: #FF8C00;
+            margin-right: 20px;
+        }
+        h2 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 32px;
+            color: #FFFFFF;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .content {
+            padding-top: 60px;
+            padding-left: 80px;
+            padding-right: 80px;
+        }
+        .intro-text {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 40px;
+            border-left: 3px solid #006400;
+            padding-left: 20px;
+        }
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .comparison-table th {
+            background-color: #006400;
+            color: #FFFFFF;
+            font-family: 'Space Grotesk', sans-serif;
+            text-transform: uppercase;
+            font-size: 16px;
+            padding-top: 20px;
+            padding-left: 20px;
+            text-align: left;
+            border-bottom: 2px solid #FF8C00;
+        }
+        .comparison-table td {
+            padding-top: 20px;
+            padding-left: 20px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 15px;
+            line-height: 1.5;
+        }
+        .feature-col {
+            width: 20%;
+            font-weight: 700;
+            color: #FF8C00;
+            background: rgba(0, 0, 0, 0.2);
+        }
+        .method-col {
+            width: 40%;
+        }
+        .conclusion-box {
+            margin-top: 40px;
+            background: rgba(255, 140, 0, 0.05);
+            border-top: 2px solid #FF8C00;
+            padding-top: 20px;
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+        .conclusion-box p {
+            font-size: 16px;
+            font-weight: 600;
+            color: #FFFFFF;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="header">
+            <div class="accent-line"></div>
+            <h2>Modelagem de Solo: Wenner vs. Schlumberger</h2>
+        </div>
+        
+        <div class="content">
+            <div class="intro-text">
+                <p>A resistividade do solo (&rho;) é o parâmetro fundamental que dita o desempenho da malha de aterramento. Como o solo raramente é homogêneo, a norma IEEE 80 exige medições precisas para a criação de modelos multicamadas.</p>
+            </div>
+
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Parâmetro Técnico</th>
+                        <th>Método de Wenner</th>
+                        <th>Método de Schlumberger</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="feature-col">Configuração</td>
+                        <td class="method-col">Quatro eletrodos com espaçamento idêntico (a).</td>
+                        <td class="method-col">Eletrodos de potencial (P) próximos; eletrodos de corrente (C) afastados.</td>
+                    </tr>
+                    <tr>
+                        <td class="feature-col">Vantagem Operacional</td>
+                        <td class="method-col">Simplicidade na execução e equipamentos comuns.</td>
+                        <td class="method-col">Menor movimentação de cabos; ideal para grandes profundidades.</td>
+                    </tr>
+                    <tr>
+                        <td class="feature-col">Sensibilidade</td>
+                        <td class="method-col">Alta sensibilidade a variações laterais do solo.</td>
+                        <td class="method-col">Melhor resolução para variações verticais (camadas).</td>
+                    </tr>
+                    <tr>
+                        <td class="feature-col">Formulação (&rho;)</td>
+                        <td class="method-col">&rho; = 2&pi;aR (Modelo de terra homogênea).</td>
+                        <td class="method-col">Requer fator geométrico (K) baseado na razão L/l.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="conclusion-box">
+                <p>Rigor Acadêmico: A escolha do método impacta diretamente na curva de resistividade aparente. Para subestações de alta tensão, o método de Schlumberger é frequentemente preferido pela sua capacidade de delinear camadas profundas com maior precisão técnica.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
